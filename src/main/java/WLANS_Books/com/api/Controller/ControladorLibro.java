@@ -67,9 +67,9 @@ public class ControladorLibro {
 
     @GetMapping
     @RequestMapping(value = "filtrarCategoria/{idCategoria}",method = RequestMethod.GET)
-    public Object filtrarCorreo(@PathVariable int idCategoria ){
+    public   ResponseEntity<?>   filtrarCorreo(@PathVariable int idCategoria ){
         //adactador lsimpl
-        Object listLibro = this.Lsimpl.filtrarCategoria(idCategoria);
+        List<Libro>  listLibro = this.Lsimpl.filtrarCategoria(idCategoria);
         return ResponseEntity.ok(listLibro);
 
     }

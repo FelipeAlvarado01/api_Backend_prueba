@@ -1,5 +1,6 @@
 package WLANS_Books.com.api.Controller;
 
+import WLANS_Books.com.api.Entity.Libro;
 import WLANS_Books.com.api.Entity.Usuario;
 import WLANS_Books.com.api.Service.UsuarioServiceIMPL.USIMPL;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,18 +60,18 @@ public class ControladorUsuario {
 
     @GetMapping
     @RequestMapping(value = "filtrarCorreo/{correo}",method = RequestMethod.GET)
-    public Object filtrarCorreo(@PathVariable String correo ){
+    public ResponseEntity<?> filtrarCorreo(@PathVariable String correo ){
         System.out.print(correo );
-        Object listUsuario = this.usimpl.filtrarCorreo(correo);
+       Usuario listUsuario = this.usimpl.filtrarCorreo(correo);
         return ResponseEntity.ok(listUsuario);
 
     }
 
     @GetMapping
     @RequestMapping(value = "filtrartelefono/{correo}",method = RequestMethod.GET)
-    public Object filtrartelefono(@PathVariable int telefono ){
-        System.out.print(telefono);
-        Object listUsuario = this.usimpl.filtrartelefono(telefono);
+    public ResponseEntity<?> filtrartelefono(@PathVariable int telefono ){
+
+        Usuario listUsuario = this.usimpl.filtrartelefono(telefono);
         return ResponseEntity.ok(listUsuario);
 
     }

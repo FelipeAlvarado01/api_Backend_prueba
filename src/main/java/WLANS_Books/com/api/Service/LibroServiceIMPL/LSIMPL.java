@@ -45,7 +45,7 @@ public  class LSIMPL implements LibroService {
 
 
     @Override
-    public Object filtrarCategoria(int idCategoria) {
+    public  List<Libro>  filtrarCategoria(int idCategoria) {
 
         return repo.filtraCategoria( idCategoria);
     }

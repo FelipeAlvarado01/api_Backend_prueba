@@ -12,6 +12,6 @@ import java.util.List;
 public interface LibroRepo extends CrudRepository<Libro, Integer> {
     @Query(value = "SELECT * FROM libros l WHERE l.categoria_id=:categoria_id", nativeQuery = true )
            // "Select u from libros u where u.categoria_id=:idCategoria")
-    List<Object> filtraCategoria(@Param("categoria_id") int idCategoria);
+    List<Libro> filtraCategoria(@Param("categoria_id") int idCategoria);
 
 }

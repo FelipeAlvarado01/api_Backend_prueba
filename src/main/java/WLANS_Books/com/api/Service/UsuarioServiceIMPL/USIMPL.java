@@ -1,5 +1,6 @@
 package WLANS_Books.com.api.Service.UsuarioServiceIMPL;
 
+import WLANS_Books.com.api.Entity.Libro;
 import WLANS_Books.com.api.Entity.Rol;
 import WLANS_Books.com.api.Entity.Usuario;
 import WLANS_Books.com.api.Respository.RolRepo;
@@ -45,13 +46,13 @@ public class USIMPL implements UsuarioService {
     }
 
     @Override
-    public Object filtrarCorreo(String correo) {
+    public Usuario  filtrarCorreo(String correo) {
 
         return repo.filtraCorreo( correo);
     }
 
     @Override
-    public Object filtrartelefono(int telefono) {
+    public Usuario  filtrartelefono(int telefono) {
 
         return repo.filtraTelefono(telefono);
     }

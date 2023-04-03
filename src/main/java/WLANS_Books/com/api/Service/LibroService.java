@@ -20,7 +20,7 @@ public interface LibroService {
 
     public void EliminarLibro(int id);
 
-    Object filtrarCategoria(int idCategoria);
+    List<Libro>  filtrarCategoria(int idCategoria);
 
 
 

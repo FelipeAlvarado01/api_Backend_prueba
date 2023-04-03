@@ -18,7 +18,7 @@ public interface UsuarioService {
 
     public void EliminarUsuario (int id);
 
-    Object filtrarCorreo(String correo);
+    Usuario  filtrarCorreo(String correo);
 
-    Object filtrartelefono(int telefono);
+    Usuario  filtrartelefono(int telefono);
 }
