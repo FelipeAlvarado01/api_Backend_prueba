@@ -15,13 +15,13 @@ import java.util.Map;
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping("api")
-public class ControladorCategoria
+public class    ControladorCategoria
 {
     @Autowired
     private CSIMPL csimpl;
 
     @GetMapping
-    @RequestMapping(value = "ConsultarCategoria",method = RequestMethod.GET)
+    @RequestMapping(value = "/categorias",method = RequestMethod.GET)
     public ResponseEntity<?>ConsultarCategoria(){
         List<Categoria>listCategoria=this.csimpl.ConsultarCategoria();
         return ResponseEntity.ok(listCategoria);
@@ -29,7 +29,7 @@ public class ControladorCategoria
     }
 
     @PostMapping
-    @RequestMapping(value = "CrearCategoria",method = RequestMethod.POST)
+    @RequestMapping(value = "/categorias",method = RequestMethod.POST)
     public ResponseEntity<?>CrearCategoria(@RequestBody Categoria categoria){
        Categoria CategoriaCreada=this.csimpl.CrearCategoria(categoria);
         return ResponseEntity.status(HttpStatus.CREATED).body(CategoriaCreada);
@@ -39,7 +39,7 @@ public class ControladorCategoria
 
     //Se crea controlador metodo PUT para modificar Categoria
     @PutMapping
-    @RequestMapping(value = "ModificarCategoria",method = RequestMethod.PUT)
+    @RequestMapping(value = "/categorias",method = RequestMethod.PUT)
     public ResponseEntity<?>ModificarCategoria(@RequestBody Categoria categoria){
         Categoria CategoriaModificado=this.csimpl.ModificarCategoria(categoria);
         return ResponseEntity.status(HttpStatus.CREATED).body(CategoriaModificado);
@@ -47,16 +47,16 @@ public class ControladorCategoria
 
     // Se crea controlador para Buscar por id categoria
     @GetMapping
-    @RequestMapping(value = "BuscarCategoria/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/categorias/{id}",method = RequestMethod.GET)
 
-        public ResponseEntity<?>El(@PathVariable int id){
+        public ResponseEntity<?>BuscarCategoria(@PathVariable int id){
         Categoria Categoria=this.csimpl.BuscarCategoria(id);
         return ResponseEntity.ok(Categoria);
 
     }
     // Se crea controlador para Eliminar por id categoria
     @DeleteMapping
-    @RequestMapping(value = "EliminarCategoria/{id}",method = RequestMethod.DELETE)
+    @RequestMapping(value = "/categorias/{id}",method = RequestMethod.DELETE)
     public ResponseEntity<?>EliminarCategoria(@PathVariable int id)
 
     {

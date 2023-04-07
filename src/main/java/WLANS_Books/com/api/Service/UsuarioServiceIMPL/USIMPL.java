@@ -51,9 +51,9 @@ public class USIMPL implements UsuarioService {
         return repo.filtraCorreo( correo);
     }
 
-    @Override
-    public Usuario  filtrartelefono(int telefono) {
+    public Usuario  filtrarTelefono(int telefono) {
 
-        return repo.filtraTelefono(telefono);
+        return repo.filtraT(telefono);
     }
+
 }

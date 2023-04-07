@@ -20,5 +20,6 @@ public interface UsuarioService {
 
     Usuario  filtrarCorreo(String correo);
 
-    Usuario  filtrartelefono(int telefono);
+    Usuario  filtrarTelefono(int telefono);
+
 }
