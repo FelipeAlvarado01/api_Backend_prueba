@@ -72,6 +72,5 @@ public class ControladorUsuario {
 
         Usuario listUsuario = this.usimpl.filtrarTelefono(telefono);
         return ResponseEntity.ok(listUsuario);
-
     }
 }
