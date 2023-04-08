@@ -16,7 +16,7 @@ public interface UsuarioRepo extends CrudRepository<Usuario, Integer> {
     Usuario filtraCorreo(@Param("correo") String correo);
 
     @Query(value = "SELECT * FROM Usuario l WHERE l.telefono=:telefono", nativeQuery = true )
-    Usuario filtraT(@Param("telefono") int telefono);
+    Usuario filtraT(@Param("telefono") String telefono);
 
 
 

@@ -67,8 +67,8 @@ public class ControladorUsuario {
     }
 
     @GetMapping
-    @RequestMapping(value = "filtrarTelefono/{correo}",method = RequestMethod.GET)
-    public ResponseEntity<?> filtrarTelefono(@PathVariable int telefono ){
+    @RequestMapping(value = "filtrarTelefono/{telefono}",method = RequestMethod.GET)
+    public ResponseEntity<?> filtrarTelefono(@PathVariable String telefono ){
 
         Usuario listUsuario = this.usimpl.filtrarTelefono(telefono);
         return ResponseEntity.ok(listUsuario);

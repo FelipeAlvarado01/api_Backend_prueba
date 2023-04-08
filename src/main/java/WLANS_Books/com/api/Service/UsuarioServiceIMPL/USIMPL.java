@@ -51,7 +51,7 @@ public class USIMPL implements UsuarioService {
         return repo.filtraCorreo( correo);
     }
 
-    public Usuario  filtrarTelefono(int telefono) {
+    public Usuario  filtrarTelefono(String telefono) {
 
         return repo.filtraT(telefono);
     }

@@ -21,7 +21,7 @@ public class Usuario {
     private String correo;
 
     @Column(name = "telefono")
-    private int telefono ;
+    private String telefono ;
 
     @Column(name = "tipo_documento")
     private String tipoDocumento;
@@ -79,11 +79,11 @@ public class Usuario {
         this.correo = correo;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
