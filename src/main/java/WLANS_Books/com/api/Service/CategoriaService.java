@@ -20,13 +20,4 @@ public interface CategoriaService {
      void EliminarCategoria(int id);
 
 
-    List<Compras> ConsultarCompras();
-
-    Compras CrearCompras(Compras compras);
-
-    Categoria ModificarCompras(Compras compras);
-
-    Compras BuscarCompras(int id);
-
-    void EliminarCompras(int id);
 }
