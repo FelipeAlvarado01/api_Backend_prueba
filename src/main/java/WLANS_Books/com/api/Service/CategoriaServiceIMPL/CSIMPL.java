@@ -16,7 +16,8 @@ public class CSIMPL implements CategoriaService {
 
     @Override
     public List<Categoria> ConsultarCategoria() {
-        return (List<Categoria>) this.repo.findAll();
+        return (List<Categoria>)
+                this.repo.findAll();
     }
 
     @Override
