@@ -15,7 +15,7 @@ public interface CompraService {
 
     public Compras BuscarCompras(int id);
 
-    public void EliminarCompras(int id);
+   // public void EliminarCompras(int id);//
 
 
 }

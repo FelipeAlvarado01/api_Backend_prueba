@@ -50,12 +50,12 @@ public class ControlesCompra {
 
     }
 
-    @DeleteMapping
+    /*@DeleteMapping
     @RequestMapping(value = "compras/{id}",method = RequestMethod.DELETE)
     public ResponseEntity<?>EliminarCompras(@PathVariable int id){
         this.coimpl.EliminarCompras(id);
         return ResponseEntity.ok().build();
-    }
+    }*/
 
 
 }
