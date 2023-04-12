@@ -36,11 +36,11 @@ public class COIMPL implements CompraService {
         return this.repo.findById(id).get();
     }
 
-    @Override
+    /*@Override
     public void EliminarCompras(int id) {
         this.repo.deleteById(id);
 
-    }
+    }*/
 
 
 

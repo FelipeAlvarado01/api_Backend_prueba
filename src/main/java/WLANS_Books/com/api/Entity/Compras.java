@@ -19,7 +19,7 @@ public class Compras {
     private float total;
 
     @Column(name = "date_create")
-    private Date date_create;
+    private String date_create;
 
     @Column(name = "usuario_id ")
     private int usuario_id  ;
@@ -40,11 +40,11 @@ public class Compras {
         this.total = total;
     }
 
-    public Date getDate_create() {
+    public String getDate_create() {
         return date_create;
     }
 
-    public void setDate_create(Date date_create) {
+    public void setDate_create(String date_create) {
         this.date_create = date_create;
     }
 
