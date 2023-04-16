@@ -22,6 +22,14 @@ public class DetalleCompras {
     @Column(name = "libros_id")
     private int libros_id;
 
+    public int getLibros_id() {
+        return libros_id;
+    }
+
+    public void setLibros_id(int libros_id) {
+        this.libros_id = libros_id;
+    }
+
     @Column(name = "precio_unitario")
     private int precio_unitario;
 
