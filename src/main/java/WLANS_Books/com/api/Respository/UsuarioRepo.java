@@ -12,10 +12,10 @@ import java.util.List;
 public interface UsuarioRepo extends CrudRepository<Usuario, Integer> {
 
 
-    @Query(value = "SELECT * FROM Usuario l WHERE l.correo=:correo", nativeQuery = true )
+    @Query(value = "SELECT * FROM usuario l WHERE l.correo=:correo", nativeQuery = true )
     Usuario filtraCorreo(@Param("correo") String correo);
 
-    @Query(value = "SELECT * FROM Usuario l WHERE l.telefono=:telefono", nativeQuery = true )
+    @Query(value = "SELECT * FROM usuario l WHERE l.telefono=:telefono", nativeQuery = true )
     Usuario filtraT(@Param("telefono") String telefono);
 
 
